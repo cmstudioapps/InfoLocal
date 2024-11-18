@@ -25,6 +25,7 @@ fetch(url)
         <div class="post">
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
+          <p id='id' style='font-size:10pt;'>id: ${post.id}</p>
           <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a>
         </div>
       `;

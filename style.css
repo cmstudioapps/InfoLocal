@@ -1,0 +1,108 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    color: #262626;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #262626;
+}
+
+/* Menu lateral */
+nav#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+}
+
+nav#sidebar ul li {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+nav#sidebar ul li a {
+    text-decoration: none;
+    color: #262626;
+    font-size: 18px;
+}
+
+nav#sidebar ul li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Botão do menu */
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #262626;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Feed */
+#feed {
+    max-width: 600px;
+    margin: 80px auto 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    border-radius: 2vh;
+    box-shadow: 0 6px 12px;
+}
+
+#feed h3 {
+    color: #999;
+}
+
+#feed p {
+  
+  font-size: 18pt;
+  
+}
+/* Botão de informações */
+.info-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #262626;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

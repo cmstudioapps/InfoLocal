@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoLocal - Notícias Locais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="app.json">
+    
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'LQnrWiXFxKmhKMTta';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>InfoLocal</h1>
+    </header>
+
+    <!-- Menu Lateral -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li onclick="Compartilhar()">Compartilhar</li>
+        </ul>
+    </nav>
+
+    <!-- Botão para abrir o menu lateral -->
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+
+    <!-- Feed principal -->
+    <div id="feed" onclick="toggleSidebar2()">
+        <h3>Aguarde... estamos buscando...</h3>
+    </div>
+
+    <!-- Botão de informações -->
+    <div class="info-icon" onclick="showAlert()">i</div>
+
+    <script src="info.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        }
+
+        function toggleSidebar2() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+            }
+        }
+
+        function Compartilhar() {
+            if (navigator.share) {
+                navigator.share({
+                    title: "InfoLocal",
+                    text: window.location.href
+                });
+            } else {
+                alert("Seu navegador não tem compatibilidade para essa função.");
+            }
+        }
+    </script>
+</body>
+</html>

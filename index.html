@@ -1,0 +1,52 @@
+<style>
+  
+  /* Tela de carregamento */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top: 5px solid #fd5949;
+    border-right: 5px solid #d6249f;
+    border-bottom: 5px solid #285AEB;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+</style>
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<script>
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+        
+        window.location.href = "feed.html"
+        
+    }, 2000); // Duração de 2 segundos
+});
+</script>

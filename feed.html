@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="app.json">
     
-    
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "15e1d4f5-ff9e-43ff-acb2-0d3088c078c7",
+    });
+  });
+</script>
     <style>
       #loading-screen {
     position: fixed;

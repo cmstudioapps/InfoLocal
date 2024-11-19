@@ -26,7 +26,7 @@ fetch(url)
           <img src="${post.IMG}" alt="Imagem do post" height="400px">
           <p>${post.LG}</p>
           <p id='id' style='font-size:10pt;'>id: ${post.id}</p>
-          <a id='ll' href="${post.Link}" target="_blank">Saiba mais</a>
+       <a id='ll' href="${post.Link}" target="_blank" style='display: ${post.visivel};>Saiba mais</a>
         </div>
       `;
       
@@ -40,7 +40,7 @@ if (!htmlContent.includes("script")) {
   })
   .catch(error => {
     console.error("Erro ao buscar dados:", error);
-    alert("ocorreu um erro na exibição de dados, reporte isso aos desenvolvedores")
+    alert("ocorreu um erro na exibição de dados, verifique sua internet mas se continuar reporte o problema aos desenvolvedores.")
   });
   
   

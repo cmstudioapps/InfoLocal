@@ -12,6 +12,8 @@ header {
     border-bottom: 1px solid #dbdbdb;
     padding: 10px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
@@ -73,7 +75,7 @@ nav#sidebar ul li:hover {
     max-width: 600px;
     margin: 80px auto 0;
     padding: 20px;
-    background: #fff;
+    background: #9E9EA4;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     text-align: center;
@@ -93,7 +95,7 @@ nav#sidebar ul li:hover {
 }
 
 #feed p {
-    font-size: 15pt;
+    font-size: 18pt;
 }
 
 /* Botão de informações */
@@ -110,4 +112,55 @@ nav#sidebar ul li:hover {
     line-height: 40px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* Estilo para cada postagem */
+.post {
+    background: white; /* Fundo escuro */
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+/* Efeito hover nas postagens */
+.post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a imagem do post */
+.post img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o texto do post */
+.post p {
+    font-size: 1.3rem;
+    color: #000000; /* Texto claro */
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o link "Saiba mais" */
+.post a#ll {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9422E7; /* Verde brilhante */
+    color: white; /* Texto preto */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+}
+
+.post a#ll:hover {
+    background-color: #00cc7f; /* Verde escuro */
+    transform: scale(1.05);
 }

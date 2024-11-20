@@ -122,7 +122,7 @@
 
 $.get(`https://wttr.in/${cidade}?format=%t`, function(data) {
     console.log("Dados recebidos:", data); // Verifica se os dados estão sendo recebidos
-    document.getElementById("temperatura").innerHTML = `Temperatura: ${data} ☀️`;
+    document.getElementById("temperatura").innerHTML = `Temperatura: ${data} ☀️ <br> (Para cabrobó e região)`;
 }).fail(function(jqXHR, textStatus, errorThrown) {
     console.log("Erro na requisição:", textStatus, errorThrown); // Exibe erro, se houver
 });

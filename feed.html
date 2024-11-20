@@ -112,6 +112,17 @@
             }
         }
     </script>
+ <script>
+  
+  const cidade = "Cabrobó";
+
+$.get(`https://wttr.in/${cidade}?format=%t`, function(data) {
+    console.log("Dados recebidos:", data); // Verifica se os dados estão sendo recebidos
+    document.getElementById("temperatura").innerHTML = `Temperatura: ${data} ☀️`;
+}).fail(function(jqXHR, textStatus, errorThrown) {
+    console.log("Erro na requisição:", textStatus, errorThrown); // Exibe erro, se houver
+});
+</script>
 
 <script type="text/javascript"> var infolinks_pid = 3429017; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>

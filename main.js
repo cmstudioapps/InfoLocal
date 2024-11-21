@@ -27,7 +27,7 @@ fetch(url)
           <p>${post.LG}</p>
           <p id='id' style='font-size:10pt;'>id: ${post.id}</p>
        <a id='ll' href="${post.Link}" target='_blank' style='display: ${post.visivel};'>Saiba mais</a>
-<div id="container-c001cb98b11a8f6d4f6cf7902b4dbf12"></div>
+
         </div>
       `;
       
